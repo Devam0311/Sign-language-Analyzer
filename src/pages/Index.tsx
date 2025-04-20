@@ -13,7 +13,6 @@ const Index = () => {
   const [result, setResult] = useState<string | null>(null);
   const { toast } = useToast();
 
-  // Handle drag-and-drop or file selection
   const handleFilesDrop = (files: File[]) => {
     setSelectedFiles(files);
     setResult(null);
@@ -23,7 +22,6 @@ const Index = () => {
     });
   };
 
-  // Process all files in a single batch
   const handleProcess = async () => {
     if (!selectedFiles.length) {
       toast({
@@ -37,21 +35,23 @@ const Index = () => {
     setIsProcessing(true);
     try {
       const formData = new FormData();
-      // Append all files under the same field name 'files'
       selectedFiles.forEach(file => formData.append('files', file));
 
-      const res = await fetch('/predict', {
+      const res = await fetch('https://sign-language-analyzer.onrender.com/predict', {
         method: 'POST',
         body: formData,
       });
 
-      if (!res.ok) throw new Error(`Server error: ${res.status}`);
+      if (!res.ok) {
+        const errData = await res.json();
+        throw new Error(errData.detail || `Server error: ${res.status}`);
+      }
 
-      const { letter } = await res.json();  // expects { letter: string }
+      const { letter } = await res.json();
       setResult(letter);
       toast({ title: 'Completed', description: letter });
     } catch (err: any) {
-      toast({ title: 'Error', description: err.message, variant: 'destructive' });
+      toast({ title: 'Error', description: err.message || 'Something went wrong', variant: 'destructive' });
     } finally {
       setIsProcessing(false);
     }
@@ -59,7 +59,7 @@ const Index = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen bg-black text-white">
-      {/* Anime-Style Aura Effects */}
+      {/* Anime-style aura effects */}
       <motion.div
         className="pointer-events-none absolute top-0 bottom-0 left-0 w-60 bg-gradient-to-r from-blue-300/90 to-transparent blur-[160px]"
         initial={{ opacity: 0.4, scale: 1 }}
@@ -83,7 +83,6 @@ const Index = () => {
           </Link>
         </div>
 
-        {/* Drag & Drop Area */}
         <DropZone multiple onDrop={handleFilesDrop} />
 
         {selectedFiles.length > 0 && (
@@ -99,7 +98,7 @@ const Index = () => {
               <Button onClick={handleProcess} disabled={isProcessing} className="w-full md:w-auto">
                 {isProcessing ? (
                   <>
-                    <Loader className="mr-2 h-4 w-4 animate-spin" />Processing...
+                    <Loader className="mr-2 h-4 w-4 animate-spin" /> Processing...
                   </>
                 ) : (
                   'Process Images'
