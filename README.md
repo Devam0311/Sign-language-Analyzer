@@ -19,6 +19,7 @@ pip install tensorflow
 pip install numpy
 pip install pandas
 pip install scikit-learn
+
 🖐 How to Use — Wield the Power of Gesture
 Prepare your hand gesture as an image (28x28 grayscale preferred).
 Drag & drop the image into the drop zone of the app.
@@ -30,6 +31,8 @@ Classes: 24 letters (A–Y, excluding J and Z which require motion)
 Training Samples: 27,455 images
 Testing Samples: 7,172 images
 Format: Flattened 784-value grayscale images
+
+
 🧠 Backend AI — Shadow Training Rituals
 The neural network model used for ASL classification is built using Keras and TensorFlow. Data exploration and preprocessing include:
 
@@ -37,6 +40,8 @@ Visualization via matplotlib and seaborn
 Data scaling using StandardScaler
 Dimensionality reduction with PCA and TSNE
 Model architecture includes Conv2D, MaxPooling, BatchNorm, Dropout, and L2 regularization
+
+
 💡 Project Details — Echoes of the Void
 Frontend: React-based UI with a dark, themed interface.
 Backend: FastAPI serves model predictions through HTTP.
@@ -44,6 +49,8 @@ Model: Trained convolutional neural network (CNN) built in Keras.
 Functionality: Users upload ASL digit images for recognition.
 Live Feedback: Predictions returned in real-time with animations.
 Theme: UI heavily inspired by Solo Leveling.
+
+
 🌌 Final Words
 "The stronger you become, the more you can protect." — Sung Jin-Woo
 For more info click here.
