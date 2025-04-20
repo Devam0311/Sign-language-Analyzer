@@ -58,18 +58,19 @@ const Readme = () => {
                 </a>
                 .
               </p>
-              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">
-npm install
-              </pre>
-              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">
-npm run dev
-              </pre>
-              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">
-pip install -r requirements.txt
-              </pre>
-              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">
-uvicorn backend:app --reload --port 8000
-              </pre>
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">npm install</pre>
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">npm run dev</pre>
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">pip install -r requirements.txt</pre>
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">uvicorn backend:app --reload --port 8000</pre>
+
+              {/* Extra Python Dependencies */}
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">pip install fastapi</pre>
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">pip install uvicorn</pre>
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">pip install keras</pre>
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">pip install tensorflow</pre>
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">pip install numpy</pre>
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">pip install pandas</pre>
+              <pre className="bg-[#1a3054] text-white font-bold rounded p-4 overflow-x-auto text-sm font-mono">pip install scikit-learn</pre>
             </section>
 
             {/* Usage Section */}
