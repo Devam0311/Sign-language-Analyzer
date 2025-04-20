@@ -54,6 +54,6 @@ Theme: UI heavily inspired by Solo Leveling.
 
 🌌 Final Words
 "The stronger you become, the more you can protect." — Sung Jin-Woo
-For more info click here.
+For more info click https://sign-language-analyzer-git-main-devams-projects-f85cb896.vercel.app.
 
 This project isn't just code — it's a conduit for accessibility and style. May your gestures pierce through the digital void.
