@@ -3,3 +3,4 @@ uvicorn
 keras
 numpy
 opencv-python
+tensorflow
