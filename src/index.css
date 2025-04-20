@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 252 80% 74%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 63.9%;
+    
+    --accent: 0 0% 9%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 9%;
+    --input: 0 0% 9%;
+    --ring: 252 80% 74%;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  body {
+    @apply bg-black text-foreground min-h-screen;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.dropzone {
+  @apply relative border-2 border-dashed rounded-lg p-12 transition-all duration-300 ease-in-out;
+}
+
+.dropzone.active {
+  @apply border-primary/70 bg-primary/5;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
