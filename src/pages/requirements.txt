@@ -4,3 +4,4 @@ keras
 numpy
 opencv-python
 tensorflow
+python-multipart
