@@ -6,3 +6,6 @@ opencv-python
 tensorflow
 python-multipart
 scikit-learn
+matplotlib
+pandas
+seaborn
