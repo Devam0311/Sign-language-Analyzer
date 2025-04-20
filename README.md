@@ -1,73 +1,51 @@
-# Welcome to your Lovable project
+🖤 Shadow Monarch’s ASL Vision
+"Even in darkness, I see everything." — Sung Jin-Woo
 
-## Project info
+This app is an ASL hand sign recognition tool inspired by the shadows. It uses a trained neural network to identify hand gestures from uploaded images. The current UI only supports drag-and-drop image uploads.
 
-**URL**: https://lovable.dev/projects/c3b176c6-2f87-4228-98c6-1ed12c1cf974
+⚔ Prerequisites – Prepare Your Arsenal
+Before summoning predictions, equip your machine with these essential tools:
 
-## How can I edit this code?
+Download Node.js from here.
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/c3b176c6-2f87-4228-98c6-1ed12c1cf974) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
-```
+pip install -r requirements.txt
+uvicorn backend:app --reload --port 8000
+pip install fastapi
+pip install uvicorn
+pip install keras
+pip install tensorflow
+pip install numpy
+pip install pandas
+pip install scikit-learn
+🖐 How to Use — Wield the Power of Gesture
+Prepare your hand gesture as an image (28x28 grayscale preferred).
+Drag & drop the image into the drop zone of the app.
+The model will instantly predict the digit with precision.
+📚 Dataset — Knowledge of the Shadows
+Our model is trained on the ancient Sign Language MNIST dataset, a collection of grayscale images representing American Sign Language (ASL) hand gestures. Each image is 28x28 pixels.
 
-**Edit a file directly in GitHub**
+Classes: 24 letters (A–Y, excluding J and Z which require motion)
+Training Samples: 27,455 images
+Testing Samples: 7,172 images
+Format: Flattened 784-value grayscale images
+🧠 Backend AI — Shadow Training Rituals
+The neural network model used for ASL classification is built using Keras and TensorFlow. Data exploration and preprocessing include:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Visualization via matplotlib and seaborn
+Data scaling using StandardScaler
+Dimensionality reduction with PCA and TSNE
+Model architecture includes Conv2D, MaxPooling, BatchNorm, Dropout, and L2 regularization
+💡 Project Details — Echoes of the Void
+Frontend: React-based UI with a dark, themed interface.
+Backend: FastAPI serves model predictions through HTTP.
+Model: Trained convolutional neural network (CNN) built in Keras.
+Functionality: Users upload ASL digit images for recognition.
+Live Feedback: Predictions returned in real-time with animations.
+Theme: UI heavily inspired by Solo Leveling.
+🌌 Final Words
+"The stronger you become, the more you can protect." — Sung Jin-Woo
+For more info click here.
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c3b176c6-2f87-4228-98c6-1ed12c1cf974) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project isn't just code — it's a conduit for accessibility and style. May your gestures pierce through the digital void.
