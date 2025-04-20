@@ -24,6 +24,7 @@ pip install scikit-learn
 Prepare your hand gesture as an image (28x28 grayscale preferred).
 Drag & drop the image into the drop zone of the app.
 The model will instantly predict the digit with precision.
+
 📚 Dataset — Knowledge of the Shadows
 Our model is trained on the ancient Sign Language MNIST dataset, a collection of grayscale images representing American Sign Language (ASL) hand gestures. Each image is 28x28 pixels.
 
