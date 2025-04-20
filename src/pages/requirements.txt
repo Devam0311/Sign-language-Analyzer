@@ -1,2 +1,5 @@
 fastapi
 uvicorn
+keras
+numpy
+opencv-python
