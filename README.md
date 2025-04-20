@@ -58,4 +58,7 @@ For more info click https://sign-language-analyzer-git-main-devams-projects-f85c
 
 THIS PROJECT DOSEN'T WORK ON PYTHON 3.13 (tensorflow is not available.)
 
+NECESSARY LIBRARIES are given in src/pages/requirements.txt
+
+
 This project isn't just code — it's a conduit for accessibility and style. May your gestures pierce through the digital void.
